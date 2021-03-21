@@ -50,7 +50,7 @@ export default function App() {
   const deleteItem = (id) => {
     db.transaction(
       (tx) => {
-        tx.executeSql(`delete from shoppinglist where id = ?;`, [id]);
+        tx.executeSql("delete from shoppinglist where id = ?;", [id]);
       },
       null,
       updateList
